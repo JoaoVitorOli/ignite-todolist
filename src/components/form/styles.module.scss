@@ -48,4 +48,14 @@
       background-color: var(--blue);
     }
   }
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 40px;
+
+    input, button {
+      width: 100%;
+    }
+  }
 }
