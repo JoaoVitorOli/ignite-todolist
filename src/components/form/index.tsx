@@ -10,11 +10,15 @@ export function Form() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    addTodo({
-      id: crypto.randomUUID(),
-      title: inputRef.current?.value || '',
-      isFinished: false
-    });
+    if (inputRef.current?.value) {
+      addTodo({
+        id: crypto.randomUUID(),
+        title: inputRef.current?.value,
+        isFinished: false
+      });
+
+      event.currentTarget.reset();
+    }
   }
 
   return (
