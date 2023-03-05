@@ -27,7 +27,7 @@ export function TaskItem(props: TasksItemProps) {
         </Checkbox.Indicator>
       </Checkbox.Root>
 
-      <label htmlFor={props.id}>
+      <label htmlFor={props.id} data-is-checked={String(props.isFinished)}>
         {props.text}
       </label>
 

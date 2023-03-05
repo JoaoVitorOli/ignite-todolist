@@ -55,6 +55,13 @@
 
   label {
     margin-right: 1.125rem;
+    transition: all 0.1s;
+
+    &[data-is-checked='true'] {
+      transition: all 0.1s;
+      color: var(--gray-300);
+      text-decoration: line-through;
+    }
   }
 
   .trash {
